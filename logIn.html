@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in</title>
+
+    <link rel="stylesheet" type="text/css" href="design.css">
+
+    <link rel="icon" type="image/x-icon" href="MOBIBUDDY1.jpg">
+
+    <style>
+        #form {
+            border: 1px solid black;
+            display: block;
+            padding: 2%;
+            background-color: white;
+            height: 380px;
+        }
+
+        h1 {
+            display: block;
+            text-align: center;
+            color: #000909;
+        }
+    </style>
+
+    <script>
+    function validation(){
+        const password=document.getElementById("password");
+        const con_password=document.getElementById("con_password");
+        
+        if(password.value.length<8){
+            alert("Warning!! Password should be of the atleast 8 characters");
+            con_password.focus();
+            return false;
+        }
+        
+        if(!/[A-Z]/.test(password.value)){
+            alert("Warning!! Password should contain atleast 1 capital latter.");
+            con_password.focus();
+            return false;
+        }
+        
+        if(!/[a-z]/.test(password.value)){
+            alert("Warning!! Password should contain atleast 1 small latter.");
+            con_password.focus();
+            return false;
+        }
+        
+        if(!/[0-9]/.test(password.value)){
+            alert("Warning!! Password should contain atleast 1 number.");
+            con_password.focus();
+            return false;
+        }
+
+        if(password.value!=con_password.value){
+            alert("Warning!! Password should be same in both password");
+            con_password.focus();
+            return false;
+        }
+
+        else{
+            window.location.href='delivery_add.html';
+            return false;
+        }
+    }
+    </script>
+</head>
+
+<body>
+
+    <header style="display: flex; justify-content: space-between; align-items: center; padding: 10px 20px; background-color: #333; color: #fff;">
+        <div style="font-size: 1.5em;">MobiBuddy</div>
+        <nav>
+          <a href="Homepage.html" class="link" target="Home" style="color: #fff; text-decoration: none; margin-left: 15px;">Home</a>
+          <a href="delivery_add.html" class="link" target="Home" style="color: #fff; text-decoration: none; margin-left: 15px;">Address</a>
+          <a href="logIn.html" class="link" target="Home" style="color: #fff; text-decoration: none; margin-left: 15px;">Login</a>
+        </nav>
+      </header>
+
+    <div id="form" style="position: relative;top: 50px;left: 35%;width: 400px;">
+        <form onsubmit="return validation()">
+            <b>
+                <h1>Login</h1>
+            </b>
+            <label for="mail">
+                <p>Email</p>
+            </label>
+            <input type="email" id="mail" required placeholder="Enter your Email">
+            <label for="password">
+                <p>Password</p>
+            </label>
+            <input type="password" id="password" required name="password" placeholder="Enter the password">
+
+            <label for="con_password">
+                <p>Confirm Password</p>
+            </label>
+            <input type="password" id="con_password" required name="con_password"
+                placeholder="Enter the password again">
+            <a href="delivery_add.html"><button type="submit" class="button" style="position: relative;top: 30px;height: 40px;">Confirm</button></a>
+
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" type="text/css" href="design.css">
+    <link rel="icon" type="image/x-icon" href="MOBIBUDDY1.jpg">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="javascript.js"></script>
+    <style>
+        body {
+            background-color: #f5f5f5;
+        }
+
+        #nevigation {
+            position: static;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Nevihation bar -->
+    <header style="display: flex; justify-content: space-between; align-items: center; padding: 10px 20px; background-color: #333; color: #fff;">
+        <div style="font-size: 1.5em;">MobiBuddy</div>
+        <nav>
+          <a href="Homepage.html" class="link" target="Home" style="color: #fff; text-decoration: none; margin-left: 15px;">Home</a>
+          <a href="delivery_add.html" class="link" target="Home" style="color: #fff; text-decoration: none; margin-left: 15px;">Address</a>
+        </nav>
+      </header>
+    
+    
+      <section style="text-align: center; padding: 50px; background-color: #f4f4f4;">
+        <h1 style="font-size: 2.5em; margin-bottom: 10px;">Step into the World of Smartness</h1>
+        <p style="font-size: 1.2em; margin-bottom: 20px;">Explore the latest technological Smartphones and it's Accessories.</p>
+      </section>
+      <hr width="90%" size="5" style="background-color: black;margin-top: 10px;">
+    <!-- Product 1 -->
+    <div class="product_box">
+        <img src="sgs24.jpeg" id="p_1_img" style="position: relative; left: 10%;">
+        <p class="item" id="p_1_name">
+            Samsung Galaxy S24 Ultra<br>
+            5G AI Smartphone <br>
+            Titanium Gray, 12GB, 256GB Storage
+            &nbsp;<br>
+        <p>
+            <hr>
+            E-store price:
+        <p class="price" id="p_1_price">₹ 94,990.00</p>
+        <p class="pr_real">₹ 134,990.00</p>
+        <p class="save">SAVE ₹ 30,000.00</p>
+        <hr>
+        <ul>
+            <li>Device interface - primary	Touchscreen with Stylus Support
+            <li>Resolution-QHD+ 3120 x 1440
+            <li>Other camera features-Rear, Front
+            <li>Audio Jack-USB Type C
+            <li>water resistance-water resistant
+        </ul>
+        </p>
+        <a href="delivery_add.html"><button type="button" class="button" style="position: relative;top: 15px;"
+                onclick="storeDetails('sgs24.jpeg','Samsung Galaxy S24 Ultra<br>','₹ 94,990.00')">Buy Now</button></a>
+    </div>
+    <!-- Product 2 -->
+    <div class="product_box" style="position: relative;">
+        <img src="sgs24fe.jpeg" style="position: relative; left: 15%;">
+        <p class="item">
+            Samsung Galaxy S24 FE <br>
+            5G AI Smartphone <br>
+            (Mint, 8GB RAM, 128GB Storage)<br>
+            &nbsp;
+        <p>
+            <hr>
+            E-store price:
+        <p class="price">₹ 59,990.00</p>
+        <p class="pr_real">₹ 39,990.00</p>
+        <p class="save">SAVE ₹ 20,000.00</p>
+        <hr>
+        <ul>
+            <li>Brand-Samsung
+            <li>RAM Memory Installed Size-8 GB
+            <li>CPU Model-Snapdragon
+            <li>CPU Speed-3.1 GHz
+            <li>1TB M.2 NVMe™ PCIe® 4.0 SSD storage
+        </ul>
+        </p>
+        <a href="delivery_add.html"><button type="button" class="button" style="position: relative;bottom: -15px;"
+                onclick="storeDetails('sgs24fe.jpeg','Samsung Galaxy S24 FE<br>','₹ 59,990.00')">Buy
+                Now</button></a>
+    </div>
+    <!-- Product 3 -->
+    <div class="product_box" style="position: relative;top:15px;" class="p_3">
+        <img src="op131.jpeg" class="pro_img">
+        <p class="item">
+            OnePlus 13<br>
+            Smarter with OnePlus AI &nbsp;<br>
+            (12GB RAM, 256GB Storage Midnight Ocean)&nbsp;<br>
+        <p>
+            <hr>
+            E-store price:
+        <p class="price">₹ 69,990.00</p>
+        <p class="pr_real">₹ 79,990.00</p>
+        <p class="save">SAVE ₹ 10,000.00</p>
+        <hr>
+        <ul>
+            <li>Brand-OnePlus
+            <li>Operating System-Android 15
+            <li>RAM Memory Installed Size-16 GB
+            <li>CPU Speed-4.32 GHz
+            <li>Memory Storage Capacity-256 GB
+            <li>Up to 32 GB LPDDR5X-7500 MHz memory
+        </ul>
+        </p>
+        <a href="delivery_add.html"><button type="button" class="button" onclick="storeDetails('op131.jpg','OnePlus 13','₹ 69,990.00')">Buy Now</button></a>
+    </div>
+
+    <!-- Second Row -->
+     <div>
+    <!-- Product 1 -->
+        <div class="product_box" style="position: relative; bottom: 30px;" class="p_4">
+            <img src="mi100001.jpeg" class="pro_img" style="position: relative; left: 5%;">
+            <p class="item">
+                Mi Power Bank 3<br>
+                10000mAh<br>
+                USB-C 2-Way Fast Charging<br>
+            <p>
+                <hr>
+                E-store price:
+            <p class="price">₹ 2,499.00</p>
+            <p class="pr_real">₹ 4,999.00</p>
+            <p class="save">SAVE ₹ 2,500.00</p>
+            <hr>
+            <ul>
+                <li>Temperature Resistance
+                <li>Short-circuit Protection
+                <li>Reset Mechanism
+                <li>Input Overvoltage Protection
+                <li>Output Overvoltage Protection
+            </ul>
+            </p>
+            <a href="delivery_add.html"><button type="button" class="button" style="position: relative;bottom: -35px;"
+                    onclick="storeDetails('mi100001.jpeg','Mi Power Bank 3','₹ 2,499.00')">Buy
+                    Now</button></a>
+        </div>
+        <!-- Product 2 -->
+        <div class="product_box" style="position: relative; bottom: 30px;" class="p_5">
+            <img src="sgbudspro.jpeg" style="position: relative; left: 20%;">
+            <p class="item">
+                Samsung Galaxy Buds Pro 2<br>
+                in-Ear Earbuds<br><br>
+            <p>
+                <hr>
+                E-store price:
+            <p class="price">₹ 10,499.00</p>
+            <p class="pr_real">₹ 15,499.00</p>
+            <p class="save">SAVE ₹ 5,000.00</p>
+            <hr>
+            <ul>
+                <li>Brand-Samsung
+                <li>Ear Placement-In Ear
+                <li>Form Factor-In Ear
+                <li>Material-Plastic
+                <li>Impedance-16 Ohm
+                <li>Item Weight-150 g
+            </ul>
+            </p>
+            <a href="delivery_add.html"><button type="button" class="button" style="position: relative;bottom: -35px;"
+                    onclick="storeDetails('sgbudspro.jpeg','Samsung Galaxy Buds Pro 2','₹ 10,499.00')">Buy
+                    Now</button></a>
+        </div>
+        <!-- Product 3 -->
+        <div class="product_box" style="position: relative; bottom: 0px" class="p_6">
+            <img src="op100w.jpeg" class="pro_img">
+            <p class="item">
+                OnePlus SUPERVOOC <br>
+                100W Dual Ports Power Adapter White
+            <p>
+                <hr>
+                E-store price:
+            <p class="price">₹ 1,999.00</p>
+            <p class="pr_real">₹ 3,999.00</p>
+            <p class="save">SAVE ₹ 2,000.00</p>
+            <hr>
+            <ul>
+                <li>Brand: OnePlus
+                <li>Model: VCBAUACH
+                <li>Color: White
+                <li>Material: PC
+                <li>Input: 100-240V~50/60Hz2.5A
+                <li>Size: 62.5mmx61.0mmx 31.0mm
+                <li>Weight: Charger 177g, Cable 47g
+            </ul>
+            </p>
+            <a href="delivery_add.html"><button type="button" class="button" style="position: relative;bottom: -5px;"
+                    onclick="storeDetails('op100w.jpeg','OnePlus SUPERVOOC','₹ 1,999.00')">Buy
+                    Now</button></a>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+
+    function storeDetails(img_src, name, price) {
+        let a=confirm("Are you sure You want to buy this item!");
+        if(a==true){
+            sessionStorage.setItem("img_src", img_src);
+            sessionStorage.setItem("name", name);
+            sessionStorage.setItem("price", price);
+        }
+    }
+
+</script>

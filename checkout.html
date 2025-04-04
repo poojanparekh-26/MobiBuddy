@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Out</title>
+    <link rel="stylesheet" type="text/css" href="design.css">
+    <link rel="icon" type="image/x-icon" href="MOBIBUDDY1.jpg">
+
+    <style>
+        #form {
+            border: 1px solid black;
+            display: block;
+            padding: 2%;
+            background-color: white;
+            height: 380px;
+        }
+
+        h1 {
+            display: block;
+            text-align: center;
+            color: #000909;
+        }
+        .input{
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .input:hover{
+            background-color: #fcf5ee;
+        }
+    </style>
+</head>
+
+<body onload="call()">
+    <!-- Nevihation bar -->
+    <header style="display: flex; justify-content: space-between; align-items: center; padding: 10px 20px; background-color: #333; color: #fff;">
+        <div style="font-size: 1.5em;">MobiBuddy</div>
+        <nav>
+          <a href="Homepage.html" class="link" target="Home" style="color: #fff; text-decoration: none; margin-left: 15px;">Home</a>
+          <a href="delivery_add.html" class="link" target="Home" style="color: #fff; text-decoration: none; margin-left: 15px;">Address</a>
+        </nav>
+      </header>
+    <div id="form" style="position: relative;top: 50px;left: 35%;width: 400px;height: 690px;">
+        <form onsubmit="return validation()">
+            <b>
+                <h1>Checkout</h1>
+            </b>
+            <img id="img" src="" style="margin-left: 25%;">
+            <div id="name" style="text-align: center;"></div>
+            <div id="demo" style="text-align: center;"></div>
+            <p>Select Payment method :<br></p>
+            <div class="input">
+                <input type="radio" name="Payment_method" id="COD" required>
+                <label for="COD">
+                    Cash On Delivery :<br>
+                </label>
+            </div>
+
+            <div class="input">
+                <input type="radio" name="Payment_method" id="cards" required>
+                <label for="cards">
+                    Credit or debit card :
+                    <img src="cards.jpg" width="100%" height="50px" style="position: relative;left: 20px;">
+                </label>
+            </div>
+            
+            <div class="input">
+                <input type="radio" name="Payment_method" id="net_banking" required>
+                <label for="net_banking">
+                    Net Banking :
+                </label>
+                <label for="net_banking">
+                    <p>Choose an Option</p>
+                </label>
+                <select style="margin-top: 0px;margin-bottom: 10px;" id="net_banking">
+                    <option>Airtel Payments Bank</option>
+                    <option>Axis Bank</option>
+                    <option>HDFC Bank</option>
+                    <option>ICICI Bank</option>
+                    <option>Kotak Bank</option>
+                    <option>State Bank of India</option>
+                </select>
+            </div>
+
+            <a href="Homepage.html"><button type="submit" class="button" style="position: relative;top: 30px;height: 40px;" onclick="finish()" >Use this payment method</button></a>
+
+        </form>
+    </div>
+</body>
+
+</html>
+
+<script>
+    function call() { 
+        let txt = sessionStorage.getItem("price");
+        document.getElementById('demo').innerText = txt;
+        let img_src=sessionStorage.getItem("img_src");
+        document.getElementById('img').src=img_src;
+        let name=sessionStorage.getItem("name");
+        document.getElementById('name').innerHTML=name;
+    }
+
+    function finish(){
+        let b=confirm("Confirm your order:");
+        if(b==true){
+            let b=confirm("Your order has been placed.Thank you!");
+            if(b==true){
+                window.location.href='Home.html';
+            }
+            else{
+                window.location.href='Home.html';
+            }
+        }
+        else{
+            window.location.href='Home.html';
+            confirm("Your order has been cancelled.Please try again.");
+        }
+        window.open('Homepage.html');
+    }
+
+</script>

@@ -1,0 +1,156 @@
+
+
+.link{
+    text-decoration: none;
+    color: rgb(250, 246, 246);
+    font-size: larger;
+}
+
+.box{
+    display: inline-block;
+    width: 19.11%;
+    padding: 3.43%;
+    margin: -10px;
+    text-align: center;
+    align-content: center;
+    position: sticky;
+    top: 0px;
+    background-color: black;
+}
+
+.box:hover{
+    border-bottom: solid red 2px;
+}
+
+h1{
+    text-align: center;
+    font-family:'Times New Roman', Times, serif;
+    display:block;
+}
+
+#images{
+    height: 740px;
+    width: 100%;
+    background-image: url(fwebp3.webp);
+    animation-name: eg;
+    animation-duration: 10s;
+    animation-delay: 1s;
+}
+
+@keyframes eg {
+    0% {background-image: url(fwebp3.webp);}
+    50%{background-image: url(fwebp2.webp);}
+    100% {background-image: url(fwebp3.webp);}
+}
+
+.category{
+    display: inline-block;
+    text-align: center;
+    width: 31.3%;
+    margin-top: 60px;
+    margin-left: 15px;
+}
+
+.category:hover{
+    border-bottom: solid red 2px;
+}
+
+.cat_link{
+    text-decoration: none;
+    color: rgb(243, 238, 238);
+    font-size: 30px;
+}
+
+#content{
+    height: 500px;
+}
+
+#container{
+    position: relative;
+}
+
+/* Product Page */
+
+.product_box{
+    display: inline-block;
+    margin-top: 2%;
+    width: 20%;
+    margin-left: 6%;
+    margin-right: 2%;
+    background-color: #ffffff;
+    border:solid #ffffff 2px;
+    border-radius: 20px;
+    padding: 2%;
+    height: 640.2px;
+}
+
+.product_box:hover{
+    box-shadow: 4px 4px rgba(103, 102, 102, 0.364);
+}
+
+.pro_img{
+    position: relative;
+    left: 15%;
+}
+
+.item{
+    font-weight: bolder;
+    font-size: larger;
+}
+
+.price{
+    color:red;
+    font-size:1.4em;
+    display: block;
+    margin: -1px;
+}
+
+.save{
+    color: rgba(255, 0, 0, 0.454);
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.pr_real{
+    text-decoration:line-through;
+    display: inline;
+}
+
+.button{
+    width: 100%;
+    border: none;
+    height: 20px;
+    color: #f1f1f1;
+    background-color:  rgba(0, 0, 0, 0.835);
+}
+.button:hover{
+    background-color: black;
+}
+
+/* Delivery form */
+#delivery_add_form{
+    align-content: center;
+    align-items: center;
+    width: 500px;
+    margin-left: 500px;
+}
+
+input[type=text],input[type=number],input[type=email],input[type=tel],input[type=password]{
+    background: #f1f1f1;
+    border: none;
+    width: 100%;
+    height: 30px;
+}
+p{
+    font-weight: bold;
+}
+#button{
+    width: 100%;
+    height: 40px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.835);
+    color: #f1f1f1;
+}
+#button:hover{
+    background-color: black;
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" type="text/css" href="design.css">
+    <link rel="icon" type="image/x-icon" href="MOBIBUDDY1.jpg">
+    <style>
+        /* body{
+            background-color: #f5f5f5;
+        } */
+        #nevigation{
+            background-color: rgb(13, 14, 14);
+            margin-bottom: 30px;
+        }
+    </style>
+    <script>
+    function validation(){
+        const password=document.getElementById("password");
+        const con_password=document.getElementById("con_password");
+        const fname=document.getElementById("fname");
+        const lname=document.getElementById("lname");
+        
+        if(password.value!=con_password.value){
+            alert("Warning!! Password should be same in both password");
+            con_password.focus();
+            return false;
+        }
+
+        if( fname.value.length<2 || fname.value.length>21){
+            alert("First name should be greater than 2 and less than 21");
+            fname.focus();
+            return false;
+        }
+        
+        if( lname.value.length<2 || lname.value.length>21){
+            alert("last name should be greater than 2 and less than 21");
+            lname.focus();
+            return false;
+        }
+        else{
+            window.open('Homepage1.html');
+            return true;
+        }
+}
+    </script>
+</head>
+<body>
+    <header style="display: flex; justify-content: space-between; align-items: center; padding: 10px 20px; background-color: #333; color: #fff;">
+        <div style="font-size: 1.5em;">MobiBuddy</div>
+        <nav>
+          <a href="Homepage.html" class="link" target="Home" style="color: #fff; text-decoration: none; margin-left: 15px;">Home</a>
+          <a href="delivery_add.html" class="link" target="Home" style="color: #fff; text-decoration: none; margin-left: 15px;">Address</a>
+          <a href="Registration_form.html" class="link" target="Home" style="color: #fff; text-decoration: none; margin-left: 15px;">Register</a>
+        </nav>
+      </header>
+    <div id="delivery_add_form" style="margin-top: 15px;">
+        <form onsubmit="return validation()">
+            <fieldset>
+                <font style="position: relative; left: 115px; font-size: 30px;"><b><u>Registration Form</u></b></font>
+                <label for="fname">
+                    <p>First Name </p>
+                </label>
+                <input type="text" name="fname" id="fname"  required>
+
+                <label for="lname">
+                    <p>Last Name </p>
+                </label>
+                <input type="text" id="lname" name="lname" required>
+
+                <p>Gender :
+                    <label for="male">
+                        Male :
+                    </label>
+                    <input type="radio" name="gender" id="male">
+
+                    <label for="female">
+                        Female :
+                    </label>
+                    <input type="radio" name="gender" id="female">
+                </p>
+
+                <label for="mail">
+                    <p>Email</p>
+                </label>
+                <input type="email" id="mail" required placeholder="Enter your Email">
+                
+                <label for="phone_number">
+                    <p>Mobile number </p>
+                </label>
+                <input type="tel" pattern="[1-9][0-9]{9}" name="Mobile_number" id="phone_number" placeholder="Enter 10 digit Phone no." required>
+                
+                <label for="password">
+                    <p>Password</p>
+                </label>
+                <input type="password" id="password" required name="password" placeholder="Enter the password">
+
+                <label for="con_password">
+                    <p>Confirm Password</p>
+                </label>
+                <input type="password" id="con_password" required name="con_password" placeholder="Enter the password again">
+                <br><br>
+                <button type="submit" id="button">Submit</button> 
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>

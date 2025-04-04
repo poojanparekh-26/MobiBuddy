@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery Form</title>
+    <link rel="stylesheet" type="text/css" href="design.css">
+    <link rel="icon" type="image/x-icon" href="MOBIBUDDY1.jpg">
+    <style>
+        #nevigation{
+            background-color: rgb(13, 14, 14);
+            margin-bottom: 30px;
+        }
+    </style>
+
+    <script>
+    function validation(){
+        const fname=document.getElementById("fname");
+        const lname=document.getElementById("lname");
+    
+        if( fname.value.length<2 || fname.value.length>21){
+            alert("First name should be greater than 2 and less than 21");
+            fname.focus();
+            return false;
+        }
+        
+        if( lname.value.length<2 || lname.value.length>21){
+            alert("last name should be greater than 2 and less than 21");
+            lname.focus();
+            return false;
+        }
+        else{
+            window.location.href='checkout.html';
+            return false;
+        }
+    }
+    </script>
+</head>
+<body>
+    <header style="display: flex; justify-content: space-between; align-items: center; padding: 10px 20px; background-color: #333; color: #fff;">
+        <div style="font-size: 1.5em;">MobiBuddy</div>
+        <nav>
+          <a href="Homepage1.html" class="link" target="Home" style="color: #fff; text-decoration: none; margin-left: 15px;">Home</a>
+          <a href="delivery_add.html" class="link" target="Home" style="color: #fff; text-decoration: none; margin-left: 15px;">Address</a>
+        </nav>
+      </header>
+    <div id="delivery_add_form" style="margin-top: 15px;">
+        <form onsubmit="return validation()">
+            <fieldset>
+                <font style="position: relative; left: 125px; font-size: 30px;"><b><u>Delivery Address</u></b></font>
+                <label for="fname">
+                    <p>First Name </p>
+                </label>
+                <input type="text" name="fname" id="fname"  required>
+
+                <label for="lname">
+                    <p>Last Name </p>
+                </label>
+                <input type="text" id="lname" name="lname" required>
+                
+                <label for="phone_number">
+                    <p>Mobile number </p>
+                </label>
+                <input type="tel" pattern="[1-9][0-9]{9}" name="Mobile_number" id="phone_number" placeholder="Enter 10 digit Phone no." required>
+                
+                <p>Gender :
+                    <label for="male">
+                        Male :
+                    </label>
+                    <input type="radio" name="gender" id="male">
+
+                    <label for="female">
+                        Female :
+                    </label>
+                    <input type="radio" name="gender" id="female">
+                </p>
+
+                <label for="language">
+                    <p>Select the language</p>
+                </label>
+                <select style="margin-top: 0px;margin-bottom: 10px;" id="language">
+                    <option>English</option>
+                    <option>Gujarati</option>
+                    <option>Hindi</option>
+                    <option>Spanish</option>
+                </select>
+                
+                <label for="pin">
+                    <p>Pincode </p>
+                </label>
+                <input type="tel" pattern="[0-9]{6}" name="Pincode" id="pin" placeholder="6 digits [0-9] PIN " required>
+                
+                <label for="address">
+                    <p>Flat,House no.,Building,Company,Apartment </p>
+                </label>
+                <input type="text" name="Address" id="address" required style="height: 100px;" placeholder="Enter your address">
+                
+                <label for="area">
+                    <p>Area, Street, Sector, Village</p>
+                </label>
+                <input type="text" name="Area" id="area">
+                
+                <label for="landmark">
+                    <p>Landmark</p>
+                </label>
+                <input type="text" name="Landmark" placeholder="E.g. near apollo hospital" id="landmark" required>
+                
+                <label for="City">
+                    <p>Town/City</p>
+                </label>
+                <input type="text" name="City" id="City" required>
+                
+                <label for="State">
+                    <p>State</p>
+                </label>
+                <input type="text" name="State" id="State" required>
+                <br>
+                <br>
+                <br>
+                <button type="submit" id="button">Confirm</button>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>
